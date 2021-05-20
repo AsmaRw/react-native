@@ -1,21 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import Login from "./componnant/Login"
+import "./styles.css";
+import ValidatedLoginForm from './componnant/ValidatedLoginForm';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+export class App extends React.Component{
+  render(){
+    return (
+      <div className="App">
+        <h1>Validated Login Form</h1>
+        <ValidatedLoginForm />
+        <Login/>
+      </div>
+    );
+  }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
